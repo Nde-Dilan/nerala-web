@@ -38,6 +38,51 @@ margin-left: 100%;
   }
   
 }
+
+ /* YouTube Video Container Styles */
+  .youtube-video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 106.25%; /* 16:9 aspect ratio */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .youtube-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Ensure the video container fits within the existing design */
+  .tm-videobox-tm-videobox-circle-tm-funfact-videobox {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Style the video mask overlay if needed */
+  .video-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    pointer-events: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .youtube-video-container {
+      padding-bottom: 75%; /* Adjust aspect ratio for mobile if needed */
+    }
+  }
 .cube{
   width: 100%;
   height: 100%;
@@ -1174,14 +1219,14 @@ input[type=radio]:checked ~ label::before {
 }
 
 .bg-gradient {
-  background: -webkit-linear-gradient(90deg, #3aff12 0%,  #0e5200 100%);
-  background: -moz-linear-gradient(90deg, #163110 0%,  #0e5200 100%);
-  background: -ms-linear-gradient(90deg, #163110 0%,  #0e5200 100%);
-  background: -o-linear-gradient(90deg, #163110 0%,  #0e5200 100%);
-  background: -webkit-gradient(linear, left top, right top, from(#163110), to(#0e5200));
-  background: -webkit-linear-gradient(left, #163110 0%,  #0e5200 100%);
-  background: -o-linear-gradient(left, #163110 0%, #163110 100%);
-  background: linear-gradient(90deg, #163110 0%, #163110 100%);
+  background: -webkit-linear-gradient(90deg, #52ff2e 0%,  #2d7a18 100%);
+  background: -moz-linear-gradient(90deg, #52ff2e 0%,  #2d7a18 100%);
+  background: -ms-linear-gradient(90deg, #52ff2e 0%,  #2d7a18 100%);
+  background: -o-linear-gradient(90deg, #52ff2e 0%,  #2d7a18 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#52ff2e), to(#2d7a18));
+  background: -webkit-linear-gradient(left, #52ff2e 0%,  #2d7a18 100%);
+  background: -o-linear-gradient(left, #52ff2e 0%, #2d7a18 100%);
+  background: linear-gradient(90deg, #52ff2e 0%, #2d7a18 100%);
 }
 
 /* Background Image */
@@ -2774,7 +2819,7 @@ button.tm-videobutton.tm-videobutton-lg span i {
 .tm-form-field textarea {
   padding: 0;
   border: 0;
-  border-bottom: 1px solid #d2d4d6;
+  /* border-bottom: 1px solid #d2d4d6; */
   border-radius: 0;
 }
 

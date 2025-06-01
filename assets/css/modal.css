@@ -1,0 +1,296 @@
+
+  /* Global Patrick Hand Font Override */
+  * {
+    font-family: 'Patrick Hand', cursive !important;
+  }
+  
+  body, html {
+    font-family: 'Patrick Hand', cursive !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Patrick Hand', cursive !important;
+  }
+  
+  p, span, div, a, button, input, textarea, select {
+    font-family: 'Patrick Hand', cursive !important;
+  }
+  
+  .tm-header .tm-navigation ul li a {
+    font-family: 'Patrick Hand', cursive !important;
+  }
+  
+  .tm-button {
+    font-family: 'Patrick Hand', cursive !important;
+  }
+  
+  /* Specific adjustments for Patrick Hand font */
+  body {
+    font-size: 18px; /* Patrick Hand looks better slightly larger */
+    line-height: 1.6;
+  }
+  
+  h1 { font-size: 3.5rem; }
+  h2 { font-size: 2.8rem; }
+  h3 { font-size: 2.2rem; }
+  h4 { font-size: 1.8rem; }
+  h5 { font-size: 1.5rem; }
+  h6 { font-size: 1.3rem; }
+  
+  /* Header logo text */
+  .tm-header-logo + span {
+    font-family: 'Patrick Hand', cursive !important;
+  }
+  
+  /* Newsletter Section Styles - keep existing styles but ensure font */
+  .tm-newsletter-area {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .tm-newsletter-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .tm-newsletter-form-inner .tm-form-field {
+    margin-bottom: 25px;
+  }
+  
+  .tm-newsletter-form input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    color: #333;
+    transition: all 0.3s ease;
+    font-family: 'Patrick Hand', cursive !important;
+  }
+  
+  .tm-newsletter-form input:focus {
+    /* border-color: #6a26cd; */
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+  }
+  
+  .tm-newsletter-form input::placeholder {
+    color: #666;
+    font-family: 'Patrick Hand', cursive !important;
+  }
+  
+  .tm-newsletter-form .tm-button {
+    min-width: 200px;
+    padding: 15px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Patrick Hand', cursive !important;
+  }
+  
+  .tm-newsletter-form .tm-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .newsletter-message {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-family: 'Patrick Hand', cursive !important;
+  }
+  
+  .newsletter-success {
+    background: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    color: #4CAF50;
+  }
+  
+  .newsletter-error {
+    background: rgba(244, 67, 54, 0.1);
+    border: 1px solid rgba(244, 67, 54, 0.3);
+    color: #F44336;
+  }
+  
+  .newsletter-message i {
+    font-size: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  /* Exit Modal Styles - ensure Patrick Hand font */
+  .exit-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .exit-modal-content {
+    position: relative;
+    background: #ffffff;
+    margin: 10% auto;
+    padding: 0;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.4s ease-out;
+    overflow: hidden;
+  }
+
+  @keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .exit-modal-close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.2s;
+    font-family: 'Patrick Hand', cursive !important;
+  }
+
+  .exit-modal-close:hover {
+    color: #333;
+  }
+
+  .exit-modal-header {
+    padding: 25px 30px 0;
+    color: #333;
+    text-align: center;
+  }
+
+  .exit-modal-header h2 {
+    margin: 10px 0 0;
+    color: #6a26cd;
+    font-size: 28px;
+    font-family: 'Patrick Hand', cursive !important;
+  }
+
+  .exit-modal-body {
+    padding: 20px 30px 30px;
+  }
+
+  .exit-modal-body p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    font-family: 'Patrick Hand', cursive !important;
+  }
+
+  .exit-form-group {
+    margin-bottom: 20px;
+  }
+
+  #exit-email {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: border-color 0.3s;
+    font-family: 'Patrick Hand', cursive !important;
+  }
+
+  #exit-email:focus {
+    /* border-color: #6a26cd; */
+    outline: none;
+  }
+
+  #exit-email::placeholder {
+    font-family: 'Patrick Hand', cursive !important;
+  }
+
+  .exit-submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #6a26cd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Patrick Hand', cursive !important;
+  }
+
+  .exit-submit-btn:hover {
+    background: #5620a5;
+  }
+
+  .exit-form-success, .exit-form-error {
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Patrick Hand', cursive !important;
+  }
+
+  .exit-form-success p {
+    color: #4CAF50;
+    font-weight: 500;
+    font-family: 'Patrick Hand', cursive !important;
+  }
+  
+  .exit-form-error p {
+    color: #F44336;
+    font-weight: 500;
+    font-family: 'Patrick Hand', cursive !important;
+  }
+  
+  .exit-form-success i, .exit-form-error i {
+    font-size: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+    
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.8rem; }
+    
+    .tm-newsletter-form {
+      padding: 30px 20px;
+    }
+    
+    .tm-newsletter-form input {
+      padding: 12px 15px;
+      font-size: 16px;
+    }
+    
+    .tm-newsletter-form .tm-button {
+      min-width: 100%;
+      padding: 12px 20px;
+    }
+  }
