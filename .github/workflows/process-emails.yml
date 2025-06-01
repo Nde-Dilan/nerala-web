@@ -1,0 +1,33 @@
+name: Process Email Submissions
+
+on:
+  repository_dispatch:
+    types: [new-email-submission]
+
+jobs:
+  add-to-csv:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Create or update CSV file
+      run: |
+        # Create CSV file if it doesn't exist
+        if [ ! -f email-subscribers.csv ]; then
+          echo "Email,Timestamp,Source" > email-subscribers.csv
+        fi
+        
+        # Add new email entry
+        echo "${{ github.event.client_payload.email }},${{ github.event.client_payload.timestamp }},${{ github.event.client_payload.source }}" >> email-subscribers.csv
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add email-subscribers.csv
+        git commit -m "Add new email subscriber: ${{ github.event.client_payload.email }}"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
